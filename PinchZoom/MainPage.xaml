@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pinchZoom="using:PinchZoom"
+             x:Class="PinchZoom.MainPage"
+             x:Name="View">
+
+    <Grid
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
+        BindingContext="{Binding Source={x:Reference Name=View}}">
+
+        <pinchZoom:PinchContainer
+            IsClippedToBounds="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All">
+
+            <Image
+                Source="xp.jpg"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+        </pinchZoom:PinchContainer>
+
+    </Grid>
+
+</ContentPage>
